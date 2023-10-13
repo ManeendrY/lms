@@ -5,11 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "ls"
-                //sh "cd webapp"
+                sh 'ls'
+                //sh 'cd webapp'
                 dir('webapp') {
-                sh "npm install"
-                sh "npm run build"
+                sh 'npm install'
+                sh 'npm run build'
+                }
             }
         }
         stage('Test') {
